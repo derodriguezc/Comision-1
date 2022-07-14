@@ -1,7 +1,7 @@
 describe('Registro', () => { 
     it("Deberia registrase satisfactoriamente", () =>{
         var numero = Math.floor(Math.random() * 100)
-        cy.visit("https://pushing-front.vercel.app/")
+        cy.visit("")
         cy.get('#user').type(`FabryOtranto${numero}`)
         cy.get('#pass').type("123asd!")
         cy.get('[value="Male"]').check({ force: true })
@@ -10,5 +10,12 @@ describe('Registro', () => {
         cy.get('#year').select("1996")
         cy.get('.chakra-button').click()
         cy.get('#todolistlink').should('exist')
+    })
+
+    it.only("Deberia registrase satisfactoriamente", () =>{
+        var numero = Math.floor(Math.random() * 100)
+        cy.visit('')
+        cy.get('button')
+        cy.get('[type="submit"]').should("exist")
     })
  })
