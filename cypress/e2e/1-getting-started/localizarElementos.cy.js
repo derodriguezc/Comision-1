@@ -1,4 +1,4 @@
-it("Deberia registrase satisfactoriamente", () =>{
+it("Deberia localizar elementos satisfactoriamente", () =>{
     cy.visit("")
     cy.get('button')
     cy.get('[type="submit"]').should("exist")
