@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open --e2e -b electron",
-    "chrome": "npx cypress open --e2e -b chrome"
+    "test": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-front.vercel.app/",
+    "chrome": "npx cypress open --e2e -b chrome",
+    "prod": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-front.vercel.app/",
+    "qa": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-it.vercel.app/"
   },
   "keywords": [],
   "author": "",
