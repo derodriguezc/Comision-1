@@ -1,12 +1,14 @@
 
-describe('Hooks', () => { 
-let loginData;
-    before("deberia setear la data correctamente", function() {
-        cy.fixture("loginData").then(data => loginData = data)
-        })
-    
+describe('Hooks', () => {
+    let loginData;
 
-    beforeEach("Deberia ingresar en la url y loguearse ", function() {
+    before("deberia setear la data correctamente", () => {
+        cy.fixture("loginData").then(data => {
+            loginData = data
+        })
+    });
+
+    beforeEach("Deberia ingresar en la url y loguearse ", () => {
         cy.visit("/");
         cy.get("#registertoggle").dblclick();
         cy.get("#user").type(loginData.username);
@@ -14,7 +16,7 @@ let loginData;
         cy.get('button[type="submit"]').click();
     });
 
-    
+
     it('Deberia ingresar en "To do List"', () => {
         cy.get("#todolistlink").click();
     });
