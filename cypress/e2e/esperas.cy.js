@@ -39,15 +39,14 @@ let loginData;
         cy.get("[role='progressbar']", {timeout:10000}).should("not.exist")
     });
 
-    it("Esperas dinamicas utilizando comands", () =>{
-        cy.Esperamodal()
-        cy.get("#message").should("exist")
-    })
-
-
-    it.only("Esperas dinamicas utilizando timeouts", () =>{
+    it("Esperas dinamicas utilizando timeouts", () =>{
         cy.get("#colorChangeMessage", {timeout:10000}).should("exist")
         cy.get("#colorChangeMessage", {timeout:5000}).should("not.exist")
-    })
+    });
 
-})
+    it.only("Esperar que elemento progressBar desaparezca utilizando comands", () =>{
+        cy.esperaProgressBar();
+        cy.get("#message").should("exist");
+    });
+
+});
