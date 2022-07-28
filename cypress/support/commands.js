@@ -27,3 +27,9 @@
 Cypress.Commands.add("esperaProgressBar", () =>{
     cy.get("[role='progressbar']", {timeout:11000}).should("not.exist")
 })
+
+Cypress.Commands.add("aceptarAlerta", () =>{
+    cy.on("window:alert", (alerta, mensage) =>{
+        expect(alerta).to.contain(mensage);
+    });
+});
