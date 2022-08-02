@@ -12,7 +12,7 @@ describe('Registro', () => {
         cy.get('#todolistlink').should('exist')
     })
 
-    it.only("Deberia registrase satisfactoriamente", () =>{
+    it.only("Deberia registrase satisfactoriamente con datos validos", () =>{
         var numero = Math.floor(Math.random() * 100)
         cy.visit('')
         cy.get('button')
