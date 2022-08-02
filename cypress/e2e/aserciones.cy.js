@@ -42,10 +42,11 @@ let loginData;
         })
     })
 
-    it("Deberia comprobar que el largo de la palabra 'Waits' usando assert", () =>{
+    it("Deberia comprobar el titulo 'Waits' usando assert", () =>{
         cy.get("#title").invoke("text").then((texto) =>{
             assert.equal(texto, "Waitss", `el texto ${texto} no es Waits`);
         })
+        
     });
 
     it("deberia validar que es un string y tiene 5 caracteres", () =>{
