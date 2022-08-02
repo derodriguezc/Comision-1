@@ -46,6 +46,7 @@ let loginData;
         cy.get("#title").invoke("text").then((texto) =>{
             assert.equal(texto, "Waitss", `el texto ${texto} no es Waits`);
         })
+        
     });
 
     it("deberia validar que es un string y tiene 5 caracteres", () =>{
