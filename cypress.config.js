@@ -9,4 +9,11 @@ module.exports = defineConfig({
     "baseUrl": "https://pushing-front.vercel.app/",
     defaultCommandTimeout: 6000
   },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: false,
+    html: true,
+    json: true
+  }
 });
